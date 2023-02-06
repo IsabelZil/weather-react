@@ -1,0 +1,7 @@
+.Footer p {
+  font-size: 0.7em;
+  color: var(--fourth-color);
+}
+.Footer .github-color {
+  color: var(--first-color);
+}
