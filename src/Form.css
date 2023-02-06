@@ -6,7 +6,6 @@
   border-radius: 10pt;
   background-color: var(--first-color);
   box-shadow: var(--box-shadow);
-  width: 400px;
 }
 input {
   font-family: inherit;

@@ -20,17 +20,35 @@ export default function Weather(props) {
   if (temperature !== null) {
     return (
       <div className="Weather">
-        <ul>
-          <li>
-            <img src={iconurl} alt="weather icon" />{" "}
-          </li>{" "}
-          <li>
+        <div className="row">
+          <div className="col-12 weather-description">
             {description} in {props.city}{" "}
-          </li>{" "}
-          <li> Temperature: {Math.round(temperature)}ºC</li>{" "}
-          <li> Humidity: {Math.round(humidity)}% </li>
-          <li> Wind speed: {Math.round(wind)}km/h </li>
-        </ul>{" "}
+          </div>
+          <div className="col-6">
+            <img src={iconurl} alt="weather icon" width="150px" />
+          </div>
+          <div className="col-6">
+            <ul>
+              <li></li>
+              <li>
+                {" "}
+                <i class="fa-solid fa-temperature-full weather-properties">
+                  {" "}
+                </i>{" "}
+                {Math.round(temperature)}ºC
+              </li>{" "}
+              <li>
+                <i class="fa-solid fa-droplet weather-properties"> </i>{" "}
+                {Math.round(humidity)}%{" "}
+              </li>
+              <li>
+                {" "}
+                <i class="fa-solid fa-wind weather-properties"> </i>{" "}
+                {Math.round(wind)}km/h{" "}
+              </li>
+            </ul>{" "}
+          </div>
+        </div>
       </div>
     );
   } else {

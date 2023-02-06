@@ -6,7 +6,6 @@
   border-radius: 10pt;
   background-color: var(--second-color);
   box-shadow: var(--box-shadow);
-  width: 400px;
 }
 .Footer p {
   font-size: 0.7em;

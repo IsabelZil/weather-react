@@ -10,6 +10,7 @@
   font-family: monospace;
   color: var(--fourth-color);
   padding: 20px 50px;
+  width: 600px;
 }
 h1 {
   font-size: 40px;
