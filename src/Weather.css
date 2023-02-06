@@ -1,6 +1,6 @@
 .Weather {
   margin-top: 25px;
-  padding: 15px 15px 40px;
+  padding: 15px;
   border: 2pt solid var(--third-color);
   color: var(--fourth-color);
   border-radius: 10pt;
@@ -8,17 +8,31 @@
   box-shadow: var(--box-shadow);
   font-family: inherit;
   font-size: var(--font-size);
+  display: inline-block;
 }
+
 li {
   list-style-type: none;
-  padding-top: 8pt;
+  font-size: 10px;
 }
-ul {
-  padding-left: 3pt;
+
+.Weather ul {
+  margin: 0;
+  text-align: left;
+  padding-left: 0px;
 }
-.temperature-today{
-  font-size:60px;
+
+.celsius {
+  font-size: 20px;
+  color: var(--first-color);
 }
-.weather-properties{
-  color:var(--first-color);
+
+.temperature-today {
+  font-size: 60px;
+}
+.weather-icon-today {
+  vertical-align: left;
+}
+.weather-properties {
+  color: var(--first-color);
 }

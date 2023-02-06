@@ -20,33 +20,32 @@ export default function Weather(props) {
   if (temperature !== null) {
     return (
       <div className="Weather">
-        <div className="row">
-          <div className="col-8">
-            <span>
-              <img src={iconurl} alt="weather icon" width="150px" />
-            </span>{" "}
-            <span className="temperature-today">
+        <div>
+          <img
+            src={iconurl}
+            alt="weather icon"
+            width="150px"
+            className="weather-icon-today"
+          />
+        </div>{" "}
+        <div className="temperature-today"> {Math.round(temperature)} </div>
+        <span className="celsius">ºC</span>
+        <div>
+          <ul>
+            <li>
+              <i class="fa-solid fa-droplet weather-properties"> </i>{" "}
+              {Math.round(humidity)}%{" "}
+            </li>
+            <li>
               {" "}
-              {Math.round(temperature)}ºC
-            </span>
-          </div>
-          <div className="col-4">
-            <ul>
-              <li>
-                <i class="fa-solid fa-droplet weather-properties"> </i>{" "}
-                {Math.round(humidity)}%{" "}
-              </li>
-              <li>
-                {" "}
-                <i class="fa-solid fa-wind weather-properties"> </i>{" "}
-                {Math.round(wind)}km/h{" "}
-              </li>
-              <li>
-                <i class="fa-solid fa-panorama weather-properties"> </i>{" "}
-                {description}{" "}
-              </li>
-            </ul>{" "}
-          </div>
+              <i class="fa-solid fa-wind weather-properties"> </i>{" "}
+              {Math.round(wind)}km/h{" "}
+            </li>
+            <li>
+              <i class="fa-solid fa-panorama weather-properties"> </i>{" "}
+              {description}{" "}
+            </li>
+          </ul>{" "}
         </div>
       </div>
     );
