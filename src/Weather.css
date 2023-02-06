@@ -1,0 +1,19 @@
+.Weather {
+  margin-top: 25px;
+  padding: 15px 15px 40px;
+  border: 2pt solid var(--third-color);
+  color: var(--first-color);
+  border-radius: 10pt;
+  background-color: var(--third-color);
+  box-shadow: var(--box-shadow);
+  width: 400px;
+  font-family: inherit;
+  font-size: var(--font-size);
+}
+li {
+  list-style-type: none;
+  padding-top: 8pt;
+}
+ul {
+  padding-left: 3pt;
+}
