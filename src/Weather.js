@@ -21,22 +21,17 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <div className="row">
-          <div className="col-12 weather-description">
-            {description} in {props.city}{" "}
+          <div className="col-8">
+            <span>
+              <img src={iconurl} alt="weather icon" width="150px" />
+            </span>{" "}
+            <span className="temperature-today">
+              {" "}
+              {Math.round(temperature)}ºC
+            </span>
           </div>
-          <div className="col-6">
-            <img src={iconurl} alt="weather icon" width="150px" />
-          </div>
-          <div className="col-6">
+          <div className="col-4">
             <ul>
-              <li></li>
-              <li>
-                {" "}
-                <i class="fa-solid fa-temperature-full weather-properties">
-                  {" "}
-                </i>{" "}
-                {Math.round(temperature)}ºC
-              </li>{" "}
               <li>
                 <i class="fa-solid fa-droplet weather-properties"> </i>{" "}
                 {Math.round(humidity)}%{" "}
@@ -45,6 +40,10 @@ export default function Weather(props) {
                 {" "}
                 <i class="fa-solid fa-wind weather-properties"> </i>{" "}
                 {Math.round(wind)}km/h{" "}
+              </li>
+              <li>
+                <i class="fa-solid fa-panorama weather-properties"> </i>{" "}
+                {description}{" "}
               </li>
             </ul>{" "}
           </div>

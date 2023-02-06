@@ -16,9 +16,9 @@ li {
 ul {
   padding-left: 3pt;
 }
+.temperature-today{
+  font-size:60px;
+}
 .weather-properties{
   color:var(--first-color);
-}
-.weather-description{
-  font-size: 40px;
 }
