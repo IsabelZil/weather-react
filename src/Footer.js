@@ -12,7 +12,7 @@ export default function Footer() {
         >
           <i className="fa-brands fa-github github-color"></i>
         </a>
-        by Isabel Zilhão
+        {""} by Isabel Zilhão
       </p>
     </div>
   );
