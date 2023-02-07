@@ -20,16 +20,13 @@ export default function Weather(props) {
   if (temperature !== null) {
     return (
       <div className="Weather">
-        <div>
-          <img
-            src={iconurl}
-            alt="weather icon"
-            width="150px"
-            className="weather-icon-today"
-          />
+        <div className="Weather-icon">
+          <img src={iconurl} alt="weather icon for today" width="150px" />
         </div>{" "}
-        <div className="temperature-today"> {Math.round(temperature)} </div>
-        <span className="celsius">ºC</span>
+        <div className="temperature-today-celsius">
+          <div className="temperature-today"> {Math.round(temperature)} </div>
+          <span className="celsius">ºC</span>
+        </div>
         <div>
           <ul>
             <li>

@@ -4,7 +4,7 @@ import "./Form.css";
 
 export default function Form() {
   let [city, setCity] = useState("");
-  alert (`${city}`);
+
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -19,6 +19,7 @@ export default function Form() {
           type="search"
           placeholder="Enter a city name"
           onChange={UpdateCity}
+          className="form-width"
         />
         <input type="submit" />
       </form>
