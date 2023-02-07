@@ -4,6 +4,7 @@ import "./Form.css";
 
 export default function Form() {
   let [city, setCity] = useState("");
+  alert(`${city}`);
 
   function handleSubmit(event) {
     event.preventDefault();
