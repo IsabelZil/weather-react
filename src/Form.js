@@ -4,14 +4,14 @@ import "./Form.css";
 
 export default function Form() {
   let [city, setCity] = useState("");
-  alert(`${city}`);
-
+  
   function handleSubmit(event) {
     event.preventDefault();
   }
   function UpdateCity(event) {
     setCity(event.target.value);
   }
+  alert(`${city}`);
 
   return (
     <div className="Form">
