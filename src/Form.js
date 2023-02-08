@@ -20,9 +20,9 @@ export default function Form() {
           type="search"
           placeholder="Enter a city name"
           onChange={UpdateCity}
-          className="form-width"
+          className="input-search"
         />
-        <input type="submit" />
+        <input type="submit" classname="input-submit"/>
       </form>
     </div>
   );

@@ -1,20 +1,21 @@
 .Form {
   margin: 2px;
   padding: 15px 15px 35px;
-  border: 2pt solid;
+  border: 2px solid;
   color: var(--first-color);
-  border-radius: 10pt;
+  border-radius: 10px;
   background-color: var(--first-color);
   box-shadow: var(--box-shadow);
+  display:inline-block;
 }
 input {
   font-family: inherit;
   font-size: 15px;
   color: var(--fourth-color);
   background-color: var(--second-color);
-  border-radius: 5pt;
-  border: 5pt;
-  padding: 5pt;
+  border-radius: 5px;
+  border: 5px;
+  padding: 5px;
 
 }
 input::placeholder {
@@ -24,7 +25,10 @@ input:focus-visible {
   outline: 10px;
   color: #ff7e67;
 }
-.form-width{
-  margin-right:25pt;
-  max-width: fit-content;
+.input-search{
+  margin-right:100px;
+  width:100px;
+}
+.input-submit{
+ margin:40px;
 }
