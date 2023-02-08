@@ -6,7 +6,8 @@
   border-radius: 10px;
   background-color: var(--first-color);
   box-shadow: var(--box-shadow);
-  display:inline-block;
+  display:block;
+  width:100%;
 }
 input {
   font-family: inherit;
@@ -26,9 +27,5 @@ input:focus-visible {
   color: #ff7e67;
 }
 .input-search{
-  margin-right:100px;
-  width:100px;
-}
-.input-submit{
- margin:40px;
+  margin-right:10px;
 }
