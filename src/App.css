@@ -10,7 +10,6 @@
   font-family: monospace;
   color: var(--fourth-color);
   padding: 20px 50px;
-  width: 600px;
 }
 h1 {
   font-size: 40px;
@@ -18,7 +17,4 @@ h1 {
 }
 body {
   background: linear-gradient(90.2deg, var(--second-color), var(--third-color));
-  min-height: 100vh;
-  min-width: 100vw;
-  
 }

@@ -13,9 +13,9 @@ input {
   color: var(--fourth-color);
   background-color: var(--second-color);
   border-radius: 5pt;
-  border: 2pt;
+  border: 5pt;
   padding: 5pt;
-  margin: 7pt;
+
 }
 input::placeholder {
   color: var(--fourth-color);
@@ -25,5 +25,6 @@ input:focus-visible {
   color: #ff7e67;
 }
 .form-width{
-  width:350px;
+  margin-right:25pt;
+  max-width: fit-content;
 }

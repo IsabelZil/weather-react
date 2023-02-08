@@ -36,7 +36,7 @@ export default function Weather(props) {
             <li>
               {" "}
               <i class="fa-solid fa-wind weather-properties"> </i>{" "}
-              {Math.round(wind)}km/h{" "}
+              {Math.round(wind)} km/h
             </li>
             <li>
               <i class="fa-solid fa-panorama weather-properties"> </i>{" "}
