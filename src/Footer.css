@@ -11,6 +11,7 @@
 .Footer p {
   font-size: 0.7em;
   color: var(--first-color);
+  margin: 0;
 }
 .Footer .github-color {
   color: var(--fourth-color);
