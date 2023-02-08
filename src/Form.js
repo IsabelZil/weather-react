@@ -22,7 +22,7 @@ export default function Form() {
           onChange={UpdateCity}
           className="input-search"
         />
-        <input type="submit" classname="input-submit"/>
+        <input type="submit" className=""/>
       </form>
     </div>
   );

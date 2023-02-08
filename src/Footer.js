@@ -8,11 +8,11 @@ export default function Footer() {
         <a
           href="https://github.com/IsabelZil/weather-react"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <i className="fa-brands fa-github github-color"></i>
         </a>
-        {""} by Isabel Zilhão
+        {""} by <strong>Isabel Zilhão</strong>
       </p>
     </div>
   );

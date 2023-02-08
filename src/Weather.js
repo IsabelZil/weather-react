@@ -25,7 +25,7 @@ export default function Weather(props) {
         </div>{" "}
         <div className="temperature-today-celsius">
           <div className="temperature-today"> {Math.round(temperature)} </div>
-          <span className="celsius">ºC</span>
+          <span className="temperature-unit">ºC</span>
         </div>
         <div>
           <ul>

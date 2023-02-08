@@ -22,7 +22,7 @@
   padding-left: 0px;
 }
 
-.celsius {
+.temperature-unit {
   font-size: 20px;
   color: var(--first-color);
 }
