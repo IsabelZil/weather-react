@@ -1,0 +1,29 @@
+.TemperatureConversion {
+  display: flex;
+  padding-bottom: 20px;
+}
+.temperature-today {
+  font-size: 60px;
+  display: inline-block;
+  line-height: 60px;
+}
+.temperature-unit {
+  font-size: 20px;
+  color: var(--fourth-color);
+}
+a:link {
+  color: var(--first-color);
+}
+a:visited {
+  color: var(--second-color);
+}
+a:focus {
+  color: var(--second-color);
+}
+a:hover {
+  color: var(--second-color);
+  cursor: grab;
+}
+a:active {
+  color: var(--second-color);
+}

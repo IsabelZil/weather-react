@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
+import TemperatureConversion from "./TemperatureConversion";
 import axios from "axios";
 import "./Weather.css";
 
-
 export default function Weather(props) {
-  const[weatherData, setWeatherData]= useState({ready:false});
-  
+  const [weatherData, setWeatherData] = useState({ ready: false });
+
   function displayTemperature(response) {
     setWeatherData({
-    ready:true,
-    temperature:response.data.temperature.current,
-    description:response.data.condition.description,
-    humidity:response.data.temperature.humidity,
-    wind:response.data.wind.speed,
-    iconUrl:response.data.condition.icon_url,
-    country:response.data.country,
-    city:response.data.city,
-    date:new Date(response.data.time*1000),
-  });
+      ready: true,
+      temperature: response.data.temperature.current,
+      description: response.data.condition.description,
+      humidity: response.data.temperature.humidity,
+      wind: response.data.wind.speed,
+      iconUrl: response.data.condition.icon_url,
+      country: response.data.country,
+      city: response.data.city,
+      date: new Date(response.data.time * 1000),
+    });
   }
   if (weatherData.ready) {
     return (
@@ -37,13 +37,7 @@ export default function Weather(props) {
           {" "}
           <FormattedDate date={weatherData.date} />
         </div>
-        <div className="temperature-today-celsius mt-3">
-          <div className="temperature-today">
-            {" "}
-            {Math.round(weatherData.temperature)}{" "}
-          </div>
-          <span className="temperature-unit">ºC</span>
-        </div>
+        <TemperatureConversion celsius={weatherData.temperature}/>
         <div>
           <ul>
             <li>
