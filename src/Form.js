@@ -11,7 +11,7 @@ export default function Form() {
   function UpdateCity(event) {
     setCity(event.target.value);
   }
-  alert(`${city}`);
+  console.log(`${city}`);
 
   return (
     <div className="Form">
