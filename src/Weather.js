@@ -1,46 +1,60 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
-  let [temperature, setTemperature] = useState(null);
-  let [description, setDescription] = useState(null);
-  let [humidity, setHumidity] = useState(null);
-  let [wind, setWind] = useState(null);
-  let [iconurl, setIconUrl] = useState(null);
-
+  const[weatherData, setWeatherData]= useState({ready:false});
+  
   function displayTemperature(response) {
-    setTemperature(response.data.temperature.current);
-    setDescription(response.data.condition.description);
-    setHumidity(response.data.temperature.humidity);
-    setWind(response.data.wind.speed);
-    setIconUrl(response.data.condition.icon_url);
+    console.log(response.data);
+    setWeatherData({
+    ready:true,
+    temperature:response.data.temperature.current,
+    description:response.data.condition.description,
+    humidity:response.data.temperature.humidity,
+    wind:response.data.wind.speed,
+    iconUrl:response.data.condition.icon_url,
+    country:response.data.country,
+    city:response.data.city,
+    date:new Date(response.data.time*1000),
+  });
   }
-
-  if (temperature !== null) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="Weather-icon">
-          <img src={iconurl} alt="weather icon for today" width="150px" />
+          <img
+            src={weatherData.iconUrl}
+            alt="weather icon for today"
+            width="150px"
+          />
         </div>{" "}
+        <div className="PlaceNow">
+          {weatherData.city}, {weatherData.country}
+        </div>
+        <div className="DateNow"> <FormattedDate date={weatherData.date}/></div>
         <div className="temperature-today-celsius">
-          <div className="temperature-today"> {Math.round(temperature)} </div>
+          <div className="temperature-today">
+            {" "}
+            {Math.round(weatherData.temperature)}{" "}
+          </div>
           <span className="temperature-unit">ºC</span>
         </div>
         <div>
           <ul>
             <li>
-              <i class="fa-solid fa-droplet weather-properties"> </i>{" "}
-              {Math.round(humidity)}%{" "}
+              <i className="fa-solid fa-droplet weather-properties"> </i>{" "}
+              {Math.round(weatherData.humidity)}%{" "}
             </li>
             <li>
               {" "}
-              <i class="fa-solid fa-wind weather-properties"> </i>{" "}
-              {Math.round(wind)} km/h
+              <i className="fa-solid fa-wind weather-properties"> </i>{" "}
+              {Math.round(weatherData.wind)} km/h
             </li>
             <li>
-              <i class="fa-solid fa-panorama weather-properties"> </i>{" "}
-              {description}{" "}
+              <i className="fa-solid fa-panorama weather-properties"> </i>{" "}
+              {weatherData.description}{" "}
             </li>
           </ul>{" "}
         </div>
