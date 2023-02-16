@@ -13,6 +13,7 @@
 }
 a:link {
   color: var(--first-color);
+  text-decoration: none;
 }
 a:visited {
   color: var(--second-color);
@@ -20,8 +21,8 @@ a:visited {
 a:focus {
   color: var(--second-color);
 }
-a:hover {
-  color: var(--second-color);
+a:hover:visited {
+  color: var(--first-color);
   cursor: grab;
 }
 a:active {
