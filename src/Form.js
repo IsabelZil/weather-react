@@ -7,7 +7,7 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert("Waiting to learn how to pass on city from the form component into axios in the Weather component");
+    
   }
   function UpdateCity(event) {
     setCity(event.target.value);
