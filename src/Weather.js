@@ -22,6 +22,7 @@ export default function Weather(props) {
       country: response.data.country,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
+      coordinates: response.data.coordinates,
     });
   }
   function handleSubmit(event) {
@@ -88,7 +89,7 @@ export default function Weather(props) {
             </div>{" "}
           </div>
           <div className="WeatherForecast mt-3">
-            <WeatherForecast />
+            <WeatherForecast coordinates={weatherData.coordinates} />
           </div>
         </div>
       </div>
