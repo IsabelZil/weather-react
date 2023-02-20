@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import FormattedDate from "./FormattedDate";
 import TemperatureConversion from "./TemperatureConversion";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 import "./Form.css";
@@ -51,38 +52,43 @@ export default function Weather(props) {
             <input type="submit" />
           </form>
         </div>
-        <div className="Weather">
-          <div className="Weather-icon">
-            <img
-              src={weatherData.iconUrl}
-              alt="weather icon for today"
-              width="150px"
-            />
-          </div>{" "}
-          <div className="PlaceNow">
-            {weatherData.city}, {weatherData.country}
+        <div className="row">
+          <div className="Weather mt-3">
+            <div className="Weather-icon">
+              <img
+                src={weatherData.iconUrl}
+                alt="weather icon for today"
+                width="150px"
+              />
+            </div>{" "}
+            <div className="PlaceNow">
+              {weatherData.city}, {weatherData.country}
+            </div>
+            <div className="DateNow ">
+              {" "}
+              <FormattedDate date={weatherData.date} />
+            </div>
+            <TemperatureConversion celsius={weatherData.temperature} />
+            <div>
+              <ul>
+                <li>
+                  <i className="fa-solid fa-droplet weather-properties"> </i>{" "}
+                  {Math.round(weatherData.humidity)}%{" "}
+                </li>
+                <li>
+                  {" "}
+                  <i className="fa-solid fa-wind weather-properties"> </i>{" "}
+                  {Math.round(weatherData.wind)} km/h
+                </li>
+                <li>
+                  <i className="fa-solid fa-panorama weather-properties"> </i>{" "}
+                  {weatherData.description}{" "}
+                </li>
+              </ul>{" "}
+            </div>{" "}
           </div>
-          <div className="DateNow ">
-            {" "}
-            <FormattedDate date={weatherData.date} />
-          </div>
-          <TemperatureConversion celsius={weatherData.temperature} />
-          <div>
-            <ul>
-              <li>
-                <i className="fa-solid fa-droplet weather-properties"> </i>{" "}
-                {Math.round(weatherData.humidity)}%{" "}
-              </li>
-              <li>
-                {" "}
-                <i className="fa-solid fa-wind weather-properties"> </i>{" "}
-                {Math.round(weatherData.wind)} km/h
-              </li>
-              <li>
-                <i className="fa-solid fa-panorama weather-properties"> </i>{" "}
-                {weatherData.description}{" "}
-              </li>
-            </ul>{" "}
+          <div className="WeatherForecast mt-3">
+            <WeatherForecast />
           </div>
         </div>
       </div>

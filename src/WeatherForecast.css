@@ -1,0 +1,13 @@
+.WeatherForecast{
+  margin-top: 25px;
+  padding: 15px;
+  border: 2pt solid var(--third-color);
+  color: var(--fourth-color);
+  border-radius: 10pt;
+  background-color: var(--third-color);
+  box-shadow: var(--box-shadow);
+  font-family: inherit;
+  font-size: var(--font-size);
+  text-align:center;
+  display: inline-block;
+}
