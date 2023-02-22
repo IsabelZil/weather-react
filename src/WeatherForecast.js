@@ -4,36 +4,25 @@ import React, { useState } from "react";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
-  const [weatherDataForecast, setWeatherDataForecast] = useState({
-    ready: false,
-  });
+  let [loaded, setLoaded] = useState(false);
+  let [weatherDataForecast, setWeatherDataForecast] = useState(null);
 
   function handleResponse(response) {
-    setWeatherDataForecast({
-      icon: response.data.daily[0].condition.icon,
-      description: response.data.daily[0].condition.description,
-    });
+    setWeatherDataForecast(response.data.daily);
+    setLoaded(true);
     console.log(response);
   }
-  function search() {
-    let longitude = props.coordinates.longitude;
-    let latitude = props.coordinates.latitude;
 
-    let units = "metric";
-    let apiKey = "eff86f61teof84b36bcb9a7a1708340d";
-    let api = "https://api.shecodes.io/weather/v1/forecast?";
-    let apiUrl = `${api}lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(handleResponse);
-  }
-  if (weatherDataForecast.ready) {
+  if (loaded) {
     return (
       <div className="row">
-        <div className="WeatherForecast-day">Mon</div>
+        <div className="WeatherForecast-day">
+          {weatherDataForecast.daily[0].date}
+        </div>
         <div className="WeatherForecast-icon">
           <img
-            src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherDataForecast.icon}.png`}
-            alt={weatherDataForecast.description}
+            src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherDataForecast.daily[0].condition.icon}.png`}
+            alt={weatherDataForecast.daily[0].condition.description}
             title="weather icon"
             width="50px"
           />
@@ -46,7 +35,16 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    search();
-    return "The weather server is loading...";
+    let longitude = props.coordinates.longitude;
+    let latitude = props.coordinates.latitude;
+
+    let units = "metric";
+    let apiKey = "eff86f61teof84b36bcb9a7a1708340d";
+    let api = "https://api.shecodes.io/weather/v1/forecast?";
+    let apiUrl = `${api}lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
   }
+
+  return null;
 }
