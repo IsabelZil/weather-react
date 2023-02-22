@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
-  const [icon, setIcon] = useState(null);
+  const [icon, setIcon] = useState();
   function handleResponse(response) {
     setIcon(response.data.daily[0].condition.icon);
   }
