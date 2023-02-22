@@ -19,23 +19,23 @@ export default function TemperatureConversion(props) {
       <div className="TemperatureConversion mt-3">
         <div className="temperature-today"> {Math.round(props.celsius)} </div>
         <span className="temperature-unit">
-          ºC|
+          °C|
           <a href="/" onClick={showFahrenheit}>
-            ºF
+            °F
           </a>
         </span>
       </div>
     );
   } else {
-    let fahrenheit = props.celsius*9/5 +32;
+    let fahrenheit = (props.celsius * 9) / 5 + 32;
     return (
       <div className="TemperatureConversion mt-3">
         <div className="temperature-today"> {Math.round(fahrenheit)} </div>
         <span className="temperature-unit">
           <a href="/" onClick={showCelsius}>
-            ºC
+            °C
           </a>
-          |ºF
+          |°F
         </span>
       </div>
     );
