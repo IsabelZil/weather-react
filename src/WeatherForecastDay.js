@@ -19,19 +19,21 @@ export default function WeatherForecastDay(props) {
   }
   return (
     <div>
-      <div className="WeatherForecast-day">{dayWeek()}</div>
-      <div className="WeatherForecast-icon">
-        <img
-          src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.daydata.condition.icon}.png`}
-          alt={props.daydata.condition.description}
-          title="weather icon"
-          width="50px"
-        />
-      </div>
-      <div className="WeatherForecast-temperatures">
-        {" "}
-        <span className="WeatherForecast-max">{temperatureMax()}</span>
-        <span className="WeatherForecast-min">{temperatureMin()}</span>{" "}
+      <div className="WeatherForecast-day">
+        {dayWeek()}
+        <div className="WeatherForecast-icon">
+          <img
+            src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.daydata.condition.icon}.png`}
+            alt={props.daydata.condition.description}
+            title="weather icon"
+            width="50px"
+          />
+        </div>
+        <div className="WeatherForecast-temperatures">
+          {" "}
+          <span className="WeatherForecast-max">{temperatureMax()}</span>
+          <span className="WeatherForecast-min">{temperatureMin()}</span>{" "}
+        </div>
       </div>
     </div>
   );
