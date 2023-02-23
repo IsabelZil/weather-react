@@ -2,20 +2,19 @@ import React from "react";
 
 export default function WeatherForecastDay(props) {
   function temperatureMax() {
-    let temperature = Math.round(props.daydata[0].temperature.maximum);
+    let temperature = Math.round(props.daydata.temperature.maximum);
 
     return `${temperature}°`;
   }
   function temperatureMin() {
-    let temperature = Math.round(props.daydata[0].temperature.minimum);
+    let temperature = Math.round(props.daydata.temperature.minimum);
 
     return `${temperature}°`;
   }
-  function dayWeek(){
-    let days=["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-    let date = new Date(props.daydata[0].time*1000);
-    let day= date.getDay();
-
+  function dayWeek() {
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+    let date = new Date(props.daydata.time * 1000);
+    let day = date.getDay();
     return days[day];
   }
   return (
@@ -24,7 +23,7 @@ export default function WeatherForecastDay(props) {
       <div className="WeatherForecast-icon">
         <img
           src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.daydata[0].condition.icon}.png`}
-          alt={props.daydata[0].condition.description}
+          alt={props.daydata.condition.description}
           title="weather icon"
           width="50px"
         />
