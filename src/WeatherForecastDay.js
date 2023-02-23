@@ -22,7 +22,7 @@ export default function WeatherForecastDay(props) {
       <div className="WeatherForecast-day">{dayWeek()}</div>
       <div className="WeatherForecast-icon">
         <img
-          src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.daydata[0].condition.icon}.png`}
+          src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.daydata.condition.icon}.png`}
           alt={props.daydata.condition.description}
           title="weather icon"
           width="50px"

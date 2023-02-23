@@ -10,7 +10,6 @@ export default function WeatherForecast(props) {
   function handleResponse(response) {
     setWeatherDataForecast(response.data.daily);
     setIsReady(true);
-    console.log(response);
   }
 
   if (isReady) {
