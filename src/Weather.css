@@ -1,9 +1,8 @@
 .Weather {
   padding: 15px;
-  border: 2pt solid var(--third-color);
+  border: 2pt;
   color: var(--fourth-color);
   border-radius: 10pt;
-  background-color: var(--third-color);
   box-shadow: var(--box-shadow);
   font-size: var(--font-size);
 }

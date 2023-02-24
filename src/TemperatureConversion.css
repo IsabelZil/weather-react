@@ -13,19 +13,15 @@
 a:link {
   color: var(--first-color);
   text-decoration: none;
+  cursor: grab;
+  font-weight:900px;
 }
 a:visited {
-  color: var(--second-color);
+  color: var(--third-color);
 }
-a:focus {
-  color: var(--second-color);
-}
+
 a:hover:visited {
   color: var(--first-color);
-  cursor: grab;
-}
-a:active {
-  color: var(--second-color);
 }
 @media (max-width: 576px) {
   .TemperatureConversion {
