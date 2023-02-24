@@ -18,11 +18,11 @@
   text-align: left;
   padding-left: 0px;
 }
-.DateNow{
+.DateNow {
   color: var(--first-color);
   font-size: 15px;
 }
-.PlaceNow{
+.PlaceNow {
   font-size: 25px;
 }
 
@@ -30,3 +30,11 @@
   color: var(--first-color);
 }
 
+@media (max-width: 576px) {
+  .Weather {
+    text-align: center;
+  }
+  .Weather ul {
+    text-align: center;
+  }
+}

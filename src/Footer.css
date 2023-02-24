@@ -1,4 +1,4 @@
-.Footer{
+.Footer {
   margin-top: 25px;
   padding: 15px;
   border: 2pt solid;
@@ -15,4 +15,9 @@
 }
 .Footer .github-color {
   color: var(--fourth-color);
+}
+@media (max-width: 576px) {
+  .Footer {
+  text-align:center;
+  }
 }

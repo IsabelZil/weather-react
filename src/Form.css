@@ -3,7 +3,6 @@
   padding: 15px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  
 }
 input {
   font-size: 15px;
@@ -23,5 +22,9 @@ input:focus-visible {
 }
 .input-search{
   margin-right:10px;
+}
+@media (max-width:576px){
+  .Form{
+  text-align: center;}
 }
  
