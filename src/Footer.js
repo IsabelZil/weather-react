@@ -8,6 +8,7 @@ export default function Footer() {
         <a
           href="https://github.com/IsabelZil/weather-react"
           target="_blank"
+          title="github link"
           rel="noopener noreferrer"
         >
           <i className="fa-brands fa-github github-color"></i>
