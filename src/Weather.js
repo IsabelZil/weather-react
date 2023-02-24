@@ -54,7 +54,7 @@ export default function Weather(props) {
           </form>
         </div>
         <div className="row">
-          <div className="Weather mt-3">
+          <div className="Weather mt-3 ps-3">
             <div className="Weather-icon">
               <img
                 src={weatherData.iconUrl}

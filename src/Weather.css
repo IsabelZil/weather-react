@@ -1,19 +1,16 @@
 .Weather {
-  margin-top: 25px;
   padding: 15px;
   border: 2pt solid var(--third-color);
   color: var(--fourth-color);
   border-radius: 10pt;
   background-color: var(--third-color);
   box-shadow: var(--box-shadow);
-  font-family: inherit;
   font-size: var(--font-size);
-  display: inline-block;
 }
 
 .Weather li {
   list-style-type: none;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .Weather ul {
