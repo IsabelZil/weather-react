@@ -3,7 +3,7 @@
   --second-color: #347474;
   --third-color: #35495e;
   --fourth-color: #ff7e67;
-  --box-shadow: 5px 5px 5px rgb(122, 131, 141);
+  --box-shadow: 0px 5px 5px rgb(122, 131, 141);
   --font-size: 15px;
 }
 .App {
