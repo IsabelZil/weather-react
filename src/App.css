@@ -14,5 +14,5 @@
 }
 
 body {
-  background: linear-gradient(2deg,  var(--third-color), var(--second-color));
+  background: linear-gradient(2deg,  var(--third-color), var(--second-color)) fixed;
 }
