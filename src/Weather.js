@@ -50,7 +50,7 @@ export default function Weather(props) {
               onChange={UpdateCity}
               className="input-search"
             />
-            <input type="submit" />
+            <input type="submit" placeholder="Submit"/>
           </form>
         </div>
         <div className="row ">
