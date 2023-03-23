@@ -29,7 +29,7 @@ export default function WeatherForecast(props) {
 
   if (isReady) {
     return (
-      <div className="row">
+      <div className="row row-cols-3 justify-content-center">
         {weatherDataForecast.map(function(dailyForecast, index) {
           if (index < 5) {
             return (
